@@ -20,7 +20,7 @@ years_of_experience     NUMBER(10),     	  	  /* Years of experience	*/
 	--CONSTRAINT APPLICANT_pkey PRIMARY KEY ( anumber ), 
 	CONSTRAINT APPLICANT_check CHECK (years_of_experience >= 0),
     CONSTRAINT APPLICANT_email_check1 CHECK (email LIKE 'www.%'),      -- check if applicant email starts with www. or not
-    CONSTRAINT APPLICANT_email_check2 CHECK (email LIKE '%_@__%.__%')); -- check is applicant email follows email structure with @ and . or not
+    CONSTRAINT APPLICANT_email_check2 CHECK (email LIKE '%_@__%.__%')); -- check if applicant email follows email structure with @ and . or not
     --CONSTRAINT APPLICANT_phone_check CHECK (CAST(phone AS VARCHAR) LIKE '04%'));        -- check if applicant phone starts with 04 or not (since the database is assumed for Australia use only)
 	
 INSERT INTO APPLICANT VALUES(1, 'Nabeel', 'Badran', TO_DATE('06-FEB-2002', 'DD-MON-YYYY'), 'Australia', 'Wollongong', 'NSW', 0424144553, 'www.nhb403@uowmail.edu.au', '0');
